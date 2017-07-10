@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Checkout&rarr;</title>
+
+    <link href="style.css" rel="stylesheet">
+
+	<style>
+	.right_menu{
+	margin-left: 20px;
+	list-style:none;
+	}
+	
+	 #right_menu{
+	 margin-left: 10px;
+	list-style:none;
+	 }
+	 
+	
+	
+	
+.search-container {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+
+}
+
+input#search-bar {
+  margin: 0 auto;
+  width: 100%;
+  height: 30px;
+  padding: 0 20px;
+  font-size: 1rem;
+  border: 1px solid #D0CFCE;
+  border-radius:20px;
+  outline: none;
+}
+input#search-bar:focus {
+  border: 1px solid #008ABF;
+  transition: 0.35s ease;
+  color: #008ABF;
+}
+input#search-bar:focus::-webkit-input-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+input#search-bar:focus::-moz-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+input#search-bar:focus:-ms-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+
+}
+
+.search-icon {
+  position: relative;
+  float: right;
+  top: -45px;
+  right: 10px;
+}
+
+
+
+table {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-size: medium;
+    border-collapse: collapse;
+    width:700px;
+	color:#222222;
+
+}
+
+tr:nth-child(even) {
+    background-color: white;
+    border-top: 1px solid #f6f6f6;
+	
+}
+
+tr:nth-child(1) {
+
+  background-color:white;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  color: #b8b8b8;
+}
+
+td, th {
+    text-align: left;
+    padding: 8px;
+}
+
+[data-role="qtyValue"]{
+  color: #ED2B68;
+}
+
+[data-role="price"]{
+  padding-top: 15px;
+}
+
+
+
+[data-role="checkout"]{
+  background-color: #0095DDs;
+font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-size: medium;
+}
+
+[data-role="cancel"]{
+
+  font-size: medium;
+}
+
+
+
+#product{
+width:90px;
+}
+
+#strike{
+ text-decoration: line-through;
+}
+
+
+
+.qty {
+  width: 20px;
+  height: 30px;
+  text-align: center;
+  border: 0;
+  
+
+}
+
+
+input.qtyplus {
+  width: 20px;
+  height: 30px;
+  background:none;
+  border:none;
+
+
+}
+
+input.qtyminus {
+  width: 20px;
+  height: 30px;
+  background:none;
+  border:none;
+
+
+}
+
+#promo_code{
+position:relative;
+right:7px;
+}
+
+	</style>
+	
+	
+  </head>
+
+  <body>
+ 
+ <!---header--->
+<header>
+
+<!---hamburger_menu--->
+<input type="checkbox" id="hamburger"/>
+<label class="menuicon" for="hamburger">
+  <span>
+  </span>
+</label>
+<div class="menu">
+
+</div>
+
+<!---navigation--->
+    <div id="logo" class="menuUp">
+        <h1><img src="Logo.png" alt text="awarelogo"/></h1>
+        <div id="navToggle"><a href="#"></a></div>
+    </div>
+    <nav>
+        <ul>
+                <li>
+                <a href="#">Men <span class="toggle">Expand</span><span class="caret"></span></a>
+                <nav>
+                    <ul>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Sale</a></li>
+                    </ul>
+                </nav>
+            </li>
+                <li>
+                <a href="#">Woman<span class="toggle">Expand</span><span class="caret"></span></a>
+                <nav>
+                    <ul>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Sale</a></li>
+                    </ul>
+                </nav>
+            </li>
+            <li>
+                <a href="#">Kids <span class="toggle">Expand</span><span class="caret"></span></a>
+                <nav>
+                    <ul>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Sale</a></li>
+                    </ul>
+                </nav>
+            </li>
+               <li>
+                <a href="#">Accessories <span class="toggle">Expand</span><span class="caret"></span></a>
+                <nav>
+                    <ul>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Sale</a></li>
+
+                    </ul>
+                </nav>
+            </li>
+            <li><a href="#">Sale</a></li>
+			 <li><a href="#">LookBook</a></li>
+			  <li><a href="#">Blog</a></li>
+        </ul>
+    </nav>
+	
+	<!---searchbar--->
+<div class="container" 
+     id="page_container">
+  <div id="accordion_search_bar_container">
+  <form class="search-container">
+    <input type="text" id="search-bar" placeholder="Search" />
+    <a href="#"><img class="search-icon" src="search.png" /></a>
+  </form>
+
+  </div>
+</div>
+
+<!---rightmenu--->
+<div class="right_menu">
+<a href="#"><img id="right_menu" src="location-pin.png" alt text="cart" /></a>
+<a href="#"><img  id="right_menu" src="bag_black.png" alt text="cart" /></a> <b>$168</b>
+<a href="#"><img  id="right_menu" src="user.png" alt text="cart" /></a>
+</div>
+	
+</header>
+  
+  <!---wizard--->
+  <div class="center-div">
+
+  <div class="wizard">
+  <ul class="wizard-header">
+    <li class="active">
+      <div class="wizard-step1">
+        <i class="fa fa-user"></i>
+      </div>
+	  
+
+      <div class="wizard-title"> 
+	 
+	 
+	 <!---main_wizard_table--->
+	   <table >
+    <tr>
+      <th>Product</th>
+      <th></th>
+      <th></th>
+      <th>Color</th>
+      <th>Size</th>
+      <th>Price</th>
+      <th>Amount</th>
+      <th>Cost</th>
+      <th></th>
+    </tr>
+    <tr data-role="lineItem">
+      <td><img id="product" src="NuBalanceBag.png" alt text="product"/></td>
+      <td><b>New Balance Mens Street</br> Backpack</b></td>
+      <td data-role="price"></td>
+      <td><i>Black</li></td>
+      <td>S</td>
+      <td><span style="color:#ff3f2b;"><b>$485</b></span><span id="strike"><small><b>$660</b></small></span></td>
+      <td>
+	  
+<form id='myform' method='POST' action='#'>
+<input type='button' value='-' class='qtyminus' field='quantity' />
+<input type='text' name='quantity' value='0' class='qty' />
+<input type='button' value='+' class='qtyplus' field='quantity' />
+</form>
+	  
+	  
+	  </td>
+      <td><b>$970</b></td>
+  <td> X </td>
+    </tr>
+	    <tr data-role="lineItem">
+      <td><img id="product" src="CamoJacket.png" alt text="product"/></td>
+      <td><b>Lyle & Scott Mens Short </br> Sleeve Sleeve Camo </b></td>
+      <td data-role="price"></td>
+      <td><i>White</i></td>
+      <td>XXL</td>
+      <td><b>$78</b></td>
+      <td>
+	  
+<form id='myform' method='POST' action='#'>
+<input type='button' value='-' class='qtyminus' field='quantity' /><!--
+    --><input type='text' name='quantity' value='0' class='qty' /><!--
+--><input type='button' value='+' class='qtyplus' field='quantity' />
+</form>
+	  
+	  </td>
+      <td><b>$76</b></td>
+      <td>X</td>
+    </tr>
+  </table>
+	  
+</div>
+
+    <li>
+      <div class="wizard-step2">
+        <i class="fa fa-location-arrow"></i>
+      </div>
+      <div class="wizard-title"></div>
+    </li>
+    <li>
+      <div class="wizard-step3">
+        <i class="fa fa-briefcase"></i>
+      </div>
+      <div class="wizard-title"></div>
+    </li>
+    <li>
+      <div class="wizard-step4">
+        <i class="fa fa-money"></i>
+      </div>
+      <div class="wizard-title"></div>
+    </li>
+  </ul>
+  
+  <ul class="wizard-main">
+    <li>Cart</li>
+    <li>Delivery</li>
+    <li>Payment</li>
+    <li>Confirmation</li>
+  </ul>
+  
+   <!---wizard_buttons--->
+  <div class="wizard-footer">
+   <span class="button">Previous</span>
+  <span class="promocode"><img id="promo_code" src="Promo Code.png" alt text="promo"/><span id="promo"><i>Promo Code</i></span><span class="arrow_black">&rarr;</span></span>
+    <span class="total"><i>Total:</i><span id="total"><b>$1 046</b></span></span>
+    <span class="button">Next &#x27A1;</span>
+  </div>
+</div>
+  
+  </div>
+ 
+ <!---footer--->
+	<footer>
+
+  <main>
+  
+    <section>
+  &#169; <i>2015 Aware UI Kit</i>
+      </section>
+	  
+   <section>
+  <b>Privacy & Cookies</b> &nbsp; &nbsp; 
+  <b>Terms & Conditions</b> &nbsp; &nbsp;
+  <b>Accessibility</b> &nbsp; &nbsp;
+      </section>
+	
+        <section>
+<img src="Visa.png" alt text="pay_icon1" /> &nbsp;&nbsp;
+<img src="Mastercard.png" alt text="pay_icon2" />&nbsp;&nbsp;
+<img src="PayPal.png" alt text="pay_icon3" /> &nbsp;&nbsp;
+      </section>
+	  
+  </main>
+
+	</footer>
+
+<script>
+
+[].slice.call(document.querySelectorAll('.wizard')).forEach(wizard => {
+  let buttons = wizard.querySelectorAll('.button'),
+      header = wizard.querySelectorAll('.wizard-header > li'),
+      main = wizard.querySelectorAll('.wizard-main > li'),
+      selected = 0;
+  
+  function update(step) {
+    selected = Math.max(0, Math.min(main.length + 1, selected + step));
+    for(let i = 0; i < main.length; i++) {
+      header[i].className = i == selected ? 'active' : i < selected ? 'complete' : '';
+      main[i].style.left = ((i - selected) * wizard.offsetWidth) + 'px'; 
+    }
+    buttons[1].innerText = selected == main.length - 1 ? 'Finish' : 'Next';
+  };
+
+  buttons[0].addEventListener('click', event => update(-1));
+  buttons[1].addEventListener('click', event => update(1));
+});
+
+</script>	
+
+<script>
+
+</script>
+
+  </body>
+ 
+</html>
